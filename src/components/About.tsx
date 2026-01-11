@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { CheckCircle2, Target, Eye, Lightbulb } from "lucide-react";
-import MNRE from "@/assets/MNRE_india.svg";
+import MNRE from "@/assets/MNRE_india.png";
 
 const About = () => {
   const ref = useRef(null);

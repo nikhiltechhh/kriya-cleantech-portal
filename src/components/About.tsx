@@ -39,7 +39,7 @@ const About = () => {
 
   const certifications = [
     "https://i.ibb.co/Q3Hxg1nj/832-iso-9001-logo.jpg",
-    MNRE,
+    "https://mnre-pv.nise.res.in/assets/images/headerLogo/Group%2047.png",
     "https://www.presentations.gov.in/wp-content/uploads/2020/06/Skill-India_Preview.png",
     "https://www.apeasternpower.com/resources/cgrf/FormPage/images/logo_b.png",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9MDuNGQQlPJeiaT4dcpXf90mu1xgSUqthxBairYx0eeqBnWvYnqq07t1BTpT04Hagy74&usqp=CAU",

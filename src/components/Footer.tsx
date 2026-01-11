@@ -30,96 +30,133 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, link: "#", label: "Facebook" },
-    { icon: Twitter, link: "#", label: "Twitter" },
-    { icon: Instagram, link: "#", label: "Instagram" },
-    { icon: Linkedin, link: "#", label: "LinkedIn" },
-    { icon: Youtube, link: "#", label: "YouTube" },
-  ];
+  {
+    icon: Instagram,
+    link: "https://www.instagram.com/kriyacleantechservices/",
+    label: "Instagram",
+  },
+  {
+    icon: Linkedin,
+    link: "https://www.linkedin.com/company/kriya-cleantech-services/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Youtube,
+    link: "https://www.youtube.com/@KriyaCleantech",
+    label: "YouTube",
+  },
+];
+
 
   return (
     <footer className="bg-foreground text-primary-foreground">
       {/* Main Footer */}
-      <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container-custom mx-auto px-4 sm:px-6 lg:px-4 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
           {/* Company Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <img
-              src={logo}
-              alt="Kriya Cleantech Services"
-              className="h-16 w-auto mb-4 rounded-lg bg-background p-2"
-            />
-            <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Leading clean energy solutions provider specializing in solar
-              installations, EV charging infrastructure, and comprehensive
-              maintenance services.
-            </p>
-            <div className="flex gap-3">
-              {socialLinks.map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.link}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors"
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-          </motion.div>
+          {/* Company Info */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+>
+  <img
+    src="https://i.ibb.co/rGFy6nxn/Kriya-CS.jpg"
+    alt="Kriya Cleantech Services"
+    className="h-16 w-auto mb-4"
+  />
+
+  <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
+    Driving a greener future with expert Solar O&M, EPC, Monitoring Solutions, and EV Charging Services.
+  </p>
+
+  {/* Social Links */}
+  <div className="flex gap-2 mb-4">
+    {socialLinks.map((social, idx) => (
+      <a
+        key={idx}
+        href={social.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={social.label}
+        className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors"
+      >
+        <social.icon className="h-4 w-4" />
+      </a>
+    ))}
+  </div>
+
+  {/* Map Embed */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.6 }}
+    className="rounded-lg overflow-hidden shadow-lg h-[160px] sm:h-[180px] w-full"
+  >
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.0748930776526!2d81.0291008!3d16.683770600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3613b813eaec19%3A0xfdeaef20daf6b05f!2sKriya%20Cleantech%20Services!5e1!3m2!1sen!2sin!4v1768049342818!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Kriya Cleantech Services Location"
+    />
+  </motion.div>
+</motion.div>
+
 
           {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h4 className="text-lg font-heading font-semibold mb-6">
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, idx) => (
-                <li key={idx}>
-                  <Link
-                    to={link.path}
-                    className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <h4 className="text-lg font-heading font-semibold mb-6">
+                Quick Links
+              </h4>
+              <ul className="space-y-3 ">
+                {quickLinks.map((link, idx) => (
+                  <li key={idx}>
+                    <Link
+                      to={link.path}
+                      className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h4 className="text-lg font-heading font-semibold mb-6">
-              Our Services
-            </h4>
-            <ul className="space-y-3">
-              {services.map((service, idx) => (
-                <li key={idx}>
-                  <Link
-                    to={`/services/${service.id}`}
-                    className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm"
-                  >
-                    {service.shortTitle}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+            {/* Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h4 className="text-lg font-heading font-semibold mb-6">
+                Our Services
+              </h4>
+              <ul className="space-y-3">
+                {services.map((service, idx) => (
+                  <li key={idx}>
+                    <Link
+                      to={`/services/${service.id}`}
+                      className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm"
+                    >
+                      {service.shortTitle}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
           {/* Contact Info */}
           <motion.div

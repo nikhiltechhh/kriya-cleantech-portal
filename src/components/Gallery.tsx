@@ -24,11 +24,11 @@ const galleryItems = [
     title: "Solar Farm Project",
     category: "Utility Scale",
   },
-  {
-    src: gallery4,
-    title: "Maintenance & Inspection",
-    category: "O&M",
-  },
+  // {
+  //   src: gallery4,
+  //   title: "Maintenance & Inspection",
+  //   category: "O&M",
+  // },
   {
     src: gallery5,
     title: "Residential Solar Setup",
@@ -48,7 +48,7 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="section-padding bg-background" ref={ref}>
-      <div className="container-custom mx-auto">
+      <div className="container-custom mx-auto mt-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

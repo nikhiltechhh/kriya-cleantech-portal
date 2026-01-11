@@ -94,53 +94,54 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="section-padding bg-gradient-to-br from-primary/5 to-secondary/5"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden"
       ref={ref}
     >
-      <div className="container-custom mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 md:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 sm:px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4">
             Contact Us
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-3 sm:mb-4 px-4">
             Get In <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4">
             Ready to go solar or install an EV charger? Contact us today for a
             free consultation and quote.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           {/* Contact Details */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: 0 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
+            className="w-full"
           >
-            <h3 className="text-2xl font-heading font-semibold text-foreground mb-6">
+            <h3 className="text-xl sm:text-2xl font-heading font-semibold text-foreground mb-5 sm:mb-6">
               Contact Information
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {contactDetails.map((detail, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: 0 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: idx * 0.1 }}
-                  className="flex gap-4 group"
+                  className="flex gap-3 sm:gap-4 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <detail.icon className="h-5 w-5 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <detail.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                   </div>
-                  <div>
-                    <h4 className="font-medium text-foreground">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-medium text-foreground text-sm sm:text-base">
                       {detail.title}
                     </h4>
                     {detail.link ? (
@@ -148,12 +149,12 @@ const Contact = () => {
                         href={detail.link}
                         target={detail.title === "Address" ? "_blank" : "_self"}
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-secondary transition-colors"
+                        className="text-muted-foreground hover:text-secondary transition-colors text-sm sm:text-base break-words"
                       >
                         {detail.value}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground">{detail.value}</p>
+                      <p className="text-muted-foreground text-sm sm:text-base break-words">{detail.value}</p>
                     )}
                   </div>
                 </motion.div>
@@ -165,51 +166,35 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="mt-8"
+              className="mt-6 sm:mt-8"
             >
               <a
                 href={`https://wa.me/${companyInfo.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-medium rounded-full hover:bg-[#20BD5C] transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#25D366] text-white font-medium rounded-full hover:bg-[#20BD5C] transition-colors shadow-lg text-sm sm:text-base"
               >
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
                 Chat on WhatsApp
               </a>
             </motion.div>
 
-            {/* Map Embed */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.6 }}
-              className="mt-8 rounded-xl overflow-hidden shadow-lg h-[200px]"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.7839!2d81.0534!3d16.7107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQyJzM4LjUiTiA4McKwMDMnMTIuMiJF!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kriya Cleantech Location"
-              />
-            </motion.div>
+           
           </motion.div>
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 0 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full"
           >
-            <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border/50">
-              <h3 className="text-2xl font-heading font-semibold text-foreground mb-6">
+            <div className="bg-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-card border border-border/50">
+              <h3 className="text-xl sm:text-2xl font-heading font-semibold text-foreground mb-5 sm:mb-6">
                 Send us a Message
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
+              <div className="space-y-3.5 sm:space-y-4">
+                <div className="grid sm:grid-cols-2 gap-3.5 sm:gap-4">
                   <Input
                     type="text"
                     name="name"
@@ -217,7 +202,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="px-4 py-3"
+                    className="px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base"
                   />
                   <Input
                     type="tel"
@@ -226,7 +211,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="px-4 py-3"
+                    className="px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base"
                   />
                 </div>
                 <Input
@@ -235,7 +220,7 @@ const Contact = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="px-4 py-3"
+                  className="px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base"
                 />
                 <Input
                   type="text"
@@ -243,7 +228,7 @@ const Contact = () => {
                   placeholder="Subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="px-4 py-3"
+                  className="px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base"
                 />
                 <Textarea
                   name="message"
@@ -251,12 +236,12 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="px-4 py-3 resize-none"
+                  className="px-3 sm:px-4 py-2.5 sm:py-3 resize-none text-sm sm:text-base"
                 />
                 <Button
-                  type="submit"
+                  onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground py-3 rounded-lg font-medium transition-all duration-300"
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground py-2.5 sm:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base"
                 >
                   {isSubmitting ? (
                     "Sending..."
@@ -267,7 +252,7 @@ const Contact = () => {
                     </>
                   )}
                 </Button>
-              </form>
+              </div>
             </div>
           </motion.div>
         </div>

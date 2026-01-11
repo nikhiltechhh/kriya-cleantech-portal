@@ -118,9 +118,9 @@ export const services: Service[] = [
 
 export const companyInfo = {
   name: "Kriya Cleantech Services",
-  phone: "9182976494",
+  phone: "+91 91829 76494",
   email: "services@kriyacleantech.com",
-  address: "Krishna Block, Shanthigram Indraprastha, 201, Vatluru, Eluru, Andhra Pradesh 534007",
-  timing: "9AM to 6PM",
+  address: "Krishna Block, Shanthigram Indraprastha, Vatluru, Eluru, Andhra Pradesh 534007",
+  timing: "9:30AM to 5:30PM (Mon - Sat)",
   whatsappNumber: "919182976494",
 };

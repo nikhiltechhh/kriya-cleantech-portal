@@ -97,8 +97,8 @@ const Hero = () => {
                 className="grid grid-cols-3 gap-4 sm:gap-8 lg:gap-12 mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 lg:pt-12 border-t border-primary-foreground/20 max-w-4xl mx-auto"
               >
                 {[
-                  { value: "500+", label: "Projects Completed" },
-                  { value: "50MW+", label: "Capacity Installed" },
+                  { value: "450+", label: "Projects Completed" },
+                  { value: "25+", label: "Years of Experienced Team" },
                   { value: "100%", label: "Client Satisfaction" },
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center">

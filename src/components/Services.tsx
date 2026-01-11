@@ -134,7 +134,7 @@ const Services = () => {
                     </div>
 
                     {/* Stats Overlay */}
-                    <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 flex gap-2">
+                    {/* <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 flex gap-2">
                       {service.subServices.filter(s => s.isPopular).length > 0 && (
                         <div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 bg-kriya-yellow/90 backdrop-blur-sm text-foreground rounded-full shadow-lg">
                           <Star className="h-3 sm:h-4 w-3 sm:w-4 fill-current" />
@@ -143,7 +143,7 @@ const Services = () => {
                           </span>
                         </div>
                       )}
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Decorative Elements */}
@@ -180,42 +180,28 @@ const Services = () => {
 
                   {/* Sub-services List */}
                   <div className="grid sm:grid-cols-2 gap-2.5 sm:gap-3 mb-6 sm:mb-8">
-                    {service.subServices.map((sub, subIdx) => (
-                      <motion.div
-                        key={subIdx}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ 
-                          delay: idx * 0.2 + subIdx * 0.08 + 0.5,
-                          duration: 0.5,
-                          ease: [0.22, 1, 0.36, 1]
-                        }}
-                        className="flex items-start gap-2 group/item"
-                      >
-                        <CheckCircle2
-                          className={`h-4 w-4 sm:h-5 sm:w-5 mt-0.5 flex-shrink-0 transition-colors ${
-                            sub.isPopular
-                              ? "text-secondary"
-                              : "text-muted-foreground group-hover/item:text-secondary"
-                          }`}
-                        />
-                        <span
-                          className={`text-xs sm:text-sm leading-tight ${
-                            sub.isPopular
-                              ? "font-medium text-foreground"
-                              : "text-muted-foreground"
-                          }`}
-                        >
-                          {sub.title}
-                          {sub.isPopular && (
-                            <span className="ml-1.5 sm:ml-2 inline-flex items-center px-1.5 sm:px-2 py-0.5 bg-kriya-yellow/20 text-xs text-foreground rounded-full">
-                              Popular
-                            </span>
-                          )}
-                        </span>
-                      </motion.div>
-                    ))}
-                  </div>
+  {service.subServices.map((sub, subIdx) => (
+    <motion.div
+      key={subIdx}
+      initial={{ opacity: 0, x: -20 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ 
+        delay: idx * 0.2 + subIdx * 0.08 + 0.5,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1]
+      }}
+      className="flex items-start gap-2 group/item"
+    >
+      <CheckCircle2
+        className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5 flex-shrink-0 text-muted-foreground group-hover/item:text-secondary transition-colors"
+      />
+      <span className="text-xs sm:text-sm leading-tight text-muted-foreground">
+        {sub.title}
+      </span>
+    </motion.div>
+  ))}
+</div>
+
 
                   {/* CTA Button */}
                   <Link to={`/services/${service.id}`}>
@@ -233,38 +219,7 @@ const Services = () => {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ 
-            duration: 0.8, 
-            delay: 1.2,
-            ease: [0.22, 1, 0.36, 1]
-          }}
-          className="mt-12 sm:mt-16 md:mt-20 text-center"
-        >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 rounded-xl sm:rounded-2xl border border-border/50 max-w-2xl mx-auto">
-            <div className="text-center sm:text-left w-full sm:w-auto">
-              <h4 className="text-lg sm:text-xl font-heading font-semibold text-foreground mb-1">
-                Need a Custom Solution?
-              </h4>
-              <p className="text-muted-foreground text-xs sm:text-sm">
-                Let's discuss your specific clean energy requirements
-              </p>
-            </div>
-            <Button
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground whitespace-nowrap text-sm sm:text-base w-full sm:w-auto shrink-0"
-            >
-              Get Free Quote
-            </Button>
-          </div>
-        </motion.div>
+       
       </div>
     </motion.section>
   );

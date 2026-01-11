@@ -197,7 +197,13 @@ const Footer = () => {
                 <Clock className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/70 text-sm">
                   {companyInfo.timing}
-                </span>
+                </span><br></br>
+              </li>
+               <li className="flex gap-3">
+                <Phone className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span className="text-primary-foreground/70 text-sm">
+                  Support Line Available 24x7
+                </span><br></br>
               </li>
             </ul>
           </motion.div>

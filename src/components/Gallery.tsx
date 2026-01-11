@@ -1,45 +1,116 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { X, ZoomIn } from "lucide-react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import gallery1 from "@/assets/1.jpg";
+import gallery2 from "@/assets/2.jpg";
+import gallery3 from "@/assets/3.jpg";
+import gallery4 from "@/assets/4.jpg";
+import gallery5 from "@/assets/5.jpg";
+import gallery6 from "@/assets/6.jpg";
+import gallery7 from "@/assets/7.jpg";
+import gallery8 from "@/assets/8.jpg";
+import gallery9 from "@/assets/9.jpg";
+import gallery10 from "@/assets/10.jpg";
+import gallery11 from "@/assets/11.jpg";
+import gallery12 from "@/assets/12.jpg";
+import gallery13 from "@/assets/13.jpg";
+import gallery14 from "@/assets/14.jpg";
+import gallery15 from "@/assets/15.jpg";
+import gallery16 from "@/assets/16.jpg";
+import gallery17 from "@/assets/17.jpg";
+import gallery18 from "@/assets/18.jpg";
+
 
 const galleryItems = [
   {
     src: gallery1,
-    title: "Commercial Solar Installation",
-    category: "Commercial",
+    title: "Residential 3KW  Eluru, Andhra Pradesh",
+    category: "Residential",
   },
   {
     src: gallery2,
-    title: "EV Charging Station",
-    category: "EV Charging",
+    title: "Residential 3KW  Vizag, Andhra Pradesh",
+    category: "Residential",
   },
   {
     src: gallery3,
-    title: "Solar Farm Project",
-    category: "Utility Scale",
+    title: "Residential 5KW  Gudivada, Andhra Pradesh",
+    category: "Residential",
   },
-  // {
-  //   src: gallery4,
-  //   title: "Maintenance & Inspection",
-  //   category: "O&M",
-  // },
+  {
+    src: gallery4,
+    title: "Gated Community 500KW  Vijayawada, Andhra Pradesh",
+    category: "Gated Community",
+  },
   {
     src: gallery5,
-    title: "Residential Solar Setup",
+    title: "Commercial 25KW  Vijayawada, Andhra Pradesh",
+    category: "Commercial",
+  },
+  {
+    src: gallery6,
+    title: "Educational Society 20KW  Gannavaram, Andhra Pradesh",
+    category: "Educational",
+  },
+
+  {
+    src: gallery1,
+    title: "Nursery BESS 5KW  Dobucherla, Andhra Pradesh",
+    category: "BESS",
+  },
+  {
+    src: gallery2,
+    title: "Floating Solar 2MW  Kerala",
+    category: "Floating Solar",
+  },
+  {
+    src: gallery3,
+    title: "Utility Project 4MW  Karnataka",
+    category: "Utility Scale",
+  },
+  {
+    src: gallery4,
+    title: "Industrial Rooftop 900KW  Tamil Nadu",
+    category: "Industrial",
+  },
+  {
+    src: gallery5,
+    title: "Residential 3KW  Guntur, Andhra Pradesh",
     category: "Residential",
   },
   {
     src: gallery6,
-    title: "Industrial Solar Installation",
-    category: "Industrial",
+    title: "Residential 3KW  West Godavari, Andhra Pradesh",
+    category: "Residential",
+  },
+
+  {
+    src: gallery1,
+    title: "6-Pole Switchyard  Kurnool, Andhra Pradesh",
+    category: "Electrical Infrastructure",
+  },
+  {
+    src: gallery2,
+    title: "Asbestos Roof Installation 25KW  Nellore, Andhra Pradesh",
+    category: "Commercial",
+  },
+  {
+    src: gallery3,
+    title: "Villa Project 6KW  Amaravati, Andhra Pradesh",
+    category: "Residential",
+  },
+  {
+    src: gallery4,
+    title: "Commercial Project 118KW  Vizag, Andhra Pradesh",
+    category: "Commercial",
+  },
+  {
+    src: gallery5,
+    title: "Commercial Project 50KW  Hyderabad, Telangana",
+    category: "Commercial",
   },
 ];
+
 
 const Gallery = () => {
   const ref = useRef(null);
@@ -69,7 +140,8 @@ const Gallery = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
           {galleryItems.map((item, idx) => (
             <motion.div
               key={idx}

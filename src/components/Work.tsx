@@ -132,11 +132,44 @@ export default function Work() {
                     <ArrowRight className="w-6 h-6 lg:w-8 lg:h-8 text-slate-300" />
                   </div>
                 )}
+                
               </div>
             );
           })}
         </div>
+        
       </div>
+{/* Bottom CTA */}
+<div className="mt-12 sm:mt-16 md:mt-20 text-center px-4 sm:px-6 lg:px-8">
+  <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-5 sm:p-6 md:p-8 
+    bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 
+    rounded-xl sm:rounded-2xl border border-border/50 
+    max-w-2xl mx-auto transition-all duration-700 ease-out 
+    opacity-100 translate-y-0">
+    
+    <div className="text-center sm:text-left w-full sm:w-auto">
+      <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-1">
+        Need a Custom Solution?
+      </h4>
+      <p className="text-muted-foreground text-xs sm:text-sm">
+        Let's discuss your specific clean energy requirements
+      </p>
+    </div>
+
+    <button
+      onClick={() =>
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth" })
+      }
+      className="bg-secondary hover:bg-secondary/90 text-secondary-foreground 
+        whitespace-nowrap text-sm sm:text-base w-full sm:w-auto 
+        px-6 py-2.5 rounded-lg font-medium transition-colors"
+    >
+      Get Free Quote
+    </button>
+  </div>
+</div>
 
       <style>{`
         @keyframes ping {

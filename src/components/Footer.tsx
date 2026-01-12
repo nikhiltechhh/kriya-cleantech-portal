@@ -22,11 +22,10 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/#about" },
-    { name: "Services", path: "/#services" },
-    { name: "Reviews", path: "/#reviews" },
-    { name: "Gallery", path: "/#gallery" },
-    { name: "Contact", path: "/#contact" },
+    { name: "About Us", path: "/about" },
+
+    { name: "Gallery", path: "/gallery" },
+    { name: "Download", path: "/download" },
   ];
 
   const socialLinks = [

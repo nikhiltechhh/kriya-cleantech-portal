@@ -15,6 +15,29 @@ const Header = () => {
   const loginRef = useRef<HTMLDivElement>(null);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 const [isMobileLoginOpen, setIsMobileLoginOpen] = useState(false);
+const [isHovered, setIsHovered] = useState(false);
+const [x, setX] = useState(0);
+const speed = 50; // pixels per second
+const totalWidth = 1920; // total width of repeated items
+
+useEffect(() => {
+  let animationFrame: number;
+
+  const animate = () => {
+    if (!isHovered) {
+      setX((prev) => {
+        const next = prev - (speed / 60); // approx pixels per frame at 60fps
+        return next <= -totalWidth ? 0 : next;
+      });
+    }
+    animationFrame = requestAnimationFrame(animate);
+  };
+
+  animationFrame = requestAnimationFrame(animate);
+
+  return () => cancelAnimationFrame(animationFrame);
+}, [isHovered]);
+
 
   const location = useLocation();
 
@@ -77,49 +100,43 @@ const [isMobileLoginOpen, setIsMobileLoginOpen] = useState(false);
 
   return (
     <>
-      {/* Top Bar with Sliding Animation */}
-      <div className="fixed top-0 left-0 right-0 z-[60] bg-secondary text-secondary-foreground overflow-hidden">
-        <div className="relative h-10 flex items-center">
-          <motion.div
-            className="flex items-center whitespace-nowrap"
-            animate={{
-              x: [0, -1920],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 30,
-                ease: "linear",
-              },
-            }}
-          >
-            {[...Array(3)].map((_, index) => (
-              <div key={index} className="flex items-center gap-8 px-8">
-                <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm font-medium">+91 91829 76494</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  <span className="text-sm font-medium">support@kriyacleantech.com</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold"> 24X7 Support Line contact  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm font-medium">+91 73861 43927</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  <span className="text-sm font-medium">services@kriyacleantech.com</span>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+     {/* Top Bar with Sliding Animation */}
+<div className="fixed top-0 left-0 right-0 z-[60] bg-secondary text-secondary-foreground overflow-hidden">
+  <div className="relative h-10 flex items-center">
+    <motion.div
+      className="flex items-center whitespace-nowrap cursor-pointer"
+      style={{ x: x }} // <-- x from useState
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {[...Array(3)].map((_, index) => (
+        <div key={index} className="flex items-center gap-8 px-8">
+          <div className="flex items-center gap-2">
+            <Phone className="h-4 w-4" />
+            <span className="text-sm font-medium">+91 91829 76494</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Mail className="h-4 w-4" />
+            <span className="text-sm font-medium">support@kriyacleantech.com</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold">24X7 Support Line contact</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Phone className="h-4 w-4" />
+            <span className="text-sm font-medium">+91 73861 43927</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Mail className="h-4 w-4" />
+            <span className="text-sm font-medium">services@kriyacleantech.com</span>
+          </div>
         </div>
-      </div>
+      ))}
+    </motion.div>
+  </div>
+</div>
+
+
 
       {/* Main Header */}
       <header className="fixed top-10 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-md py-2 transition-all duration-300">
@@ -256,6 +273,19 @@ const [isMobileLoginOpen, setIsMobileLoginOpen] = useState(false);
     )}
   </AnimatePresence>
 </div>
+{/* Download Link */}
+<motion.div
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.3, delay: 0.55 }}
+>
+  <Link
+    to="/download"
+    className="text-sm font-medium transition-colors hover:text-secondary text-foreground"
+  >
+    Download
+  </Link>
+</motion.div>
 
 
               <motion.div
@@ -416,6 +446,12 @@ const [isMobileLoginOpen, setIsMobileLoginOpen] = useState(false);
   )}
 </AnimatePresence>
 
+<Link
+  to="/download"
+  className="block px-4 py-3 rounded-lg hover:bg-muted font-medium transition-colors"
+>
+  Download
+</Link>
 
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}

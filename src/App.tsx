@@ -10,7 +10,7 @@ import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
-
+import Download from "./components/Download";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -64,6 +64,18 @@ const App = () => (
               <>
                 <Header />
                 <Gallery />
+                <Footer />
+              </>
+            }
+          />
+
+          {/* Download with Header & Footer */}
+          <Route
+            path="/download"
+            element={
+              <>
+                <Header />
+                <Download />
                 <Footer />
               </>
             }

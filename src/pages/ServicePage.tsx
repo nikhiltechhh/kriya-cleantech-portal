@@ -17,6 +17,7 @@ import { services, companyInfo } from "@/data/services";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import pm from "@/assets/pmm.png"; 
 
 const iconMap: Record<string, React.ComponentType<any>> = {
   Settings,
@@ -219,18 +220,8 @@ const ServicePage = () => {
                       {subService.title}
                     </h3>
                   </div>
-                  {subService.isPopular && (
-                    <motion.span 
-                      className="flex items-center gap-1 px-3 py-1 bg-kriya-yellow/20 text-foreground rounded-full text-xs font-medium"
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5 + idx * 0.1, type: "spring" }}
-                    >
-                      <Star className="h-3 w-3 text-kriya-yellow fill-kriya-yellow" />
-                      Popular
-                    </motion.span>
-                  )}
+                 
+                 
                 </div>
                 <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
                   Our expert team delivers professional {subService.title.toLowerCase()}{" "}
@@ -326,7 +317,19 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
-
+{service.id === "pm-suryaghar" && (
+ <section className="py-6 sm:py-12 md:py-16 bg-muted/30">
+  <div className="container-custom mx-auto px-3 sm:px-4">
+    <div className="rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-card">
+      <img
+        src={pm}
+        alt={service.title}
+        className="w-full h-[180px] sm:h-[300px] md:h-[380px] lg:h-[440px] object-cover"
+      />
+    </div>
+  </div>
+</section>
+)}
       {/* Other Services with enhanced animations */}
       <section className="py-16 w-full max-w-full">
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
@@ -382,6 +385,7 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
+
 
       <Footer />
     </div>

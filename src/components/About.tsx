@@ -64,52 +64,25 @@ const About = () => {
               <span className="text-primary">Sustainable Future</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Kriya Cleantech Services is a rapidly growing clean energy solutions company
-              committed to advancing India's transition toward a sustainable and
-              low-carbon future. With strong capabilities in Solar Operations & Maintenance
-              (O&M), Engineering, Procurement & Construction (EPC), Monitoring Solutions,
-              EV Charging Infrastructure, and Energy Storage, we deliver integrated
-              solutions across the renewable energy value chain.
+          <p className=" text-muted-foreground mb-6 leading-relaxed text-justify">
+              At <span className="font-semibold text-foreground">Kriya Cleantech Services</span>, we are building sustainable energy infrastructure with a clear focus on scale, reliability, and long-term value creation. We operate across{" "}
+              <span className="font-semibold text-foreground">Solar Operations & Maintenance (O&M), Engineering, Procurement & Construction (EPC), Monitoring Solutions, and EV Charging Services</span>, delivering integrated clean energy solutions to a diverse customer base.
             </p>
 
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              We operate across residential, commercial, and industrial segments,
-              executing rooftop, ground-mount, and utility-scale solar projects with a
-              focus on asset performance, operational excellence, and long-term value
-              creation. Our solutions are designed to enhance energy efficiency, improve
-              system uptime, and ensure predictable returns for asset owners and
-              stakeholders.
+            <p className="text-muted-foreground mb-6 leading-relaxed text-justify">
+              Our portfolio spans <span className="font-semibold text-foreground">residential, commercial, and industrial sectors</span>, covering{" "}
+              <span className="font-semibold text-foreground">rooftop, ground-mount, and utility-scale solar projects</span>. By combining technical expertise with performance-driven operations, we help asset owners maximize energy yield, operational efficiency, and asset life.
             </p>
 
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              As a key growth driver, Kriya Cleantech Services has established a dedicated
-              PM Surya Ghar vertical aligned with national renewable energy initiatives.
-              In 2025, we successfully completed over 350+ residential rooftop solar
-              installations, demonstrating strong execution capability, scalable
-              processes, and increasing market penetration. This vertical continues to
-              expand steadily, reinforcing our leadership in the distributed solar
-              segment.
+            <p className="text-muted-foreground mb-6 leading-relaxed text-justify">
+              A key growth driver is our <span className="font-semibold text-foreground">PM Surya Ghar</span> vertical, through which we have successfully completed{" "}
+              <span className="font-semibold text-foreground">350+ residential rooftop solar installations in 2025</span>, with consistent momentum continuing. This vertical strengthens our presence in the distributed solar market while aligning with national renewable energy initiatives.
             </p>
 
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              To strengthen future readiness and technological differentiation, we have
-              launched a strategic Battery Energy Storage Systems (BESS) vertical.
-              Supported by an in-house Research & Development (R&D) team, we are actively
-              developing next-generation storage solutions aimed at regulatory
-              endorsement and commercial deployment. Our BESS roadmap focuses on
-              large-scale integrated battery systems for residential, commercial, and
-              industrial applications, enabling energy resilience, peak load management,
-              and deeper renewable integration.
-            </p>
-
-            <p className="text-muted-foreground leading-relaxed">
-              Driven by innovation, disciplined execution, and sustainability-led growth,
-              Kriya Cleantech Services is positioned as a reliable long-term partner for
-              investors, asset owners, and institutions seeking scalable and future-ready
-              clean energy solutions. We remain committed to building resilient energy
-              infrastructure while delivering measurable environmental and economic
-              impact.
+            <p className="text-muted-foreground leading-relaxed text-justify">
+              In parallel, we have launched a strategic <span className="font-semibold text-foreground">Battery Energy Storage Systems (BESS)</span> vertical, supported by an in-house{" "}
+              <span className="font-semibold text-foreground">R&D team</span> focused on future-ready energy storage solutions. Our work targets scalable battery integration for{" "}
+              <span className="font-semibold text-foreground">residential, commercial, and industrial applications</span>, including large-format systems that enhance grid resilience and renewable energy penetration.
             </p>
 
             {/* Features Grid */}

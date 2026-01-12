@@ -7,8 +7,8 @@ import gallery3 from "@/assets/3.jpg";
 import gallery4 from "@/assets/4.jpg";
 import gallery5 from "@/assets/5.jpg";
 import gallery6 from "@/assets/6.jpg";
-import gallery7 from "@/assets/7.jpg";
-import gallery8 from "@/assets/8.jpg";
+import gallery7 from "@/assets/7.png";  
+import gallery8 from "@/assets/8.png";
 import gallery9 from "@/assets/9.jpg";
 import gallery10 from "@/assets/10.jpg";
 import gallery11 from "@/assets/11.jpg";
@@ -17,99 +17,103 @@ import gallery13 from "@/assets/13.jpg";
 import gallery14 from "@/assets/14.jpg";
 import gallery15 from "@/assets/15.jpg";
 import gallery16 from "@/assets/16.jpg";
-import gallery17 from "@/assets/17.jpg";
+import gallery17 from "@/assets/17.png";
 import gallery18 from "@/assets/18.jpg";
 
 
 const galleryItems = [
   {
     src: gallery1,
-    title: "Residential 3KW  Eluru, Andhra Pradesh",
+    title: "Residential 3KW, Eluru-AP",
     category: "Residential",
   },
   {
     src: gallery2,
-    title: "Residential 3KW  Vizag, Andhra Pradesh",
+    title: "Residential 3KW, Vizag-AP",
     category: "Residential",
   },
   {
     src: gallery3,
-    title: "Residential 5KW  Gudivada, Andhra Pradesh",
+    title: "Residential 5KW, Gudivawada-AP",
     category: "Residential",
   },
   {
     src: gallery4,
-    title: "Gated Community 500KW  Vijayawada, Andhra Pradesh",
+    title: "Residential 3KW, Eluru-AP",
+    category: "Residential",
+  },
+  {
+    src: gallery5,
+    title: "Gated Community 500KW, Vijayawada-AP",
     category: "Gated Community",
   },
   {
-    src: gallery5,
-    title: "Commercial 25KW  Vijayawada, Andhra Pradesh",
+    src: gallery6,
+    title: "Commercial 25KW, Vijayawada-AP",
     category: "Commercial",
   },
   {
-    src: gallery6,
-    title: "Educational Society 20KW  Gannavaram, Andhra Pradesh",
+    src: gallery7,
+    title: "Educational Society 20KW, Gannavaram-AP",
     category: "Educational",
   },
-
   {
-    src: gallery1,
-    title: "Nursery BESS 5KW  Dobucherla, Andhra Pradesh",
+    src: gallery8,
+    title: "Nursery BESS 5KW, Dobuchrla-AP",
     category: "BESS",
   },
   {
-    src: gallery2,
-    title: "Floating Solar 2MW  Kerala",
+    src: gallery9,
+    title: "Floating Solar 2MW, Kerala",
     category: "Floating Solar",
   },
   {
-    src: gallery3,
-    title: "Utility Project 4MW  Karnataka",
+    src: gallery10,
+    title: "Utility Project 4MW, Karnataka",
     category: "Utility Scale",
   },
   {
-    src: gallery4,
-    title: "Industrial Rooftop 900KW  Tamil Nadu",
+    src: gallery11,
+    title: "Industrial Rooftop 900KW, Tamilnadu",
     category: "Industrial",
   },
   {
-    src: gallery5,
-    title: "Residential 3KW  Guntur, Andhra Pradesh",
+    src: gallery12,
+    title: "Residential 3KW, Guntur-AP",
     category: "Residential",
   },
   {
-    src: gallery6,
-    title: "Residential 3KW  West Godavari, Andhra Pradesh",
+    src: gallery13,
+    title: "Residential 3KW, Westgodavari-AP",
     category: "Residential",
   },
-
   {
-    src: gallery1,
-    title: "6-Pole Switchyard  Kurnool, Andhra Pradesh",
+    src: gallery14,
+    title: "6-Pole Switchyard, Kurnool-AP",
     category: "Electrical Infrastructure",
   },
   {
-    src: gallery2,
-    title: "Asbestos Roof Installation 25KW  Nellore, Andhra Pradesh",
+    src: gallery15,
+    title: "Asbestos Roof Installation 25KW, Nellore-AP",
     category: "Commercial",
   },
   {
-    src: gallery3,
-    title: "Villa Project 6KW  Amaravati, Andhra Pradesh",
+    src: gallery16,
+    title: "Villa Project 6KW, Amaravathi-AP",
     category: "Residential",
   },
   {
-    src: gallery4,
-    title: "Commercial Project 118KW  Vizag, Andhra Pradesh",
+    src: gallery17,
+    title: "Commercial Project 118KW, Vizag-AP",
     category: "Commercial",
   },
   {
-    src: gallery5,
-    title: "Commercial Project 50KW  Hyderabad, Telangana",
+    src: gallery18,
+    title: "Commercial Project 50KW, Hyderabad-TS",
     category: "Commercial",
   },
 ];
+
 
 
 const Gallery = () => {
@@ -135,7 +139,7 @@ const Gallery = () => {
           </h2>
           <p className="text-lg text-muted-foreground">
             Explore our portfolio of successful solar and EV charging projects
-            across Andhra Pradesh and beyond.
+            across Andhra Pradesh, Telangana, Karnataka, Tamilnadu & Kerala.
           </p>
         </motion.div>
 

@@ -12,6 +12,16 @@ export interface Service {
   icon: string;
   heroImage: string;
 }
+export interface Service {
+  id: string;
+  title: string;
+  shortTitle: string;
+  description: string;
+  subServices: SubService[];
+  icon: string;
+  heroImage: string;
+  bottomImage?: string; // ✅ add this
+}
 
 export const services: Service[] = [
   {
@@ -71,19 +81,24 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "pm-suryaghar",
-    title: "PM Suryaghar",
-    shortTitle: "PM Suryaghar",
-    description: "Affordable and accessible solar rooftop solutions under government initiatives",
-    icon: "Home",
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
-    subServices: [
-      { title: "Subsidy Assistance & Documentation", isPopular: true },
-      { title: "Seamless Rooftop Solar Installation", isPopular: true },
-      { title: "Net Metering & Energy Savings" },
-      { title: "Flexible Financing & Loan Options" },
-    ],
-  },
+  id: "pm-suryaghar",
+  title: "PM Suryaghar",
+  shortTitle: "PM Suryaghar",
+  description:
+    "Affordable and accessible solar rooftop solutions under government initiatives",
+  icon: "Home",
+  heroImage:
+    "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
+  bottomImage:
+    "https://i.ibb.co/jvYKS0bL/pms.jpg", // ✅ new image
+  subServices: [
+    { title: "Subsidy Assistance & Documentation", isPopular: true },
+    { title: "Seamless Rooftop Solar Installation", isPopular: true },
+    { title: "Net Metering & Energy Savings" },
+    { title: "Flexible Financing & Loan Options" },
+  ],
+},
+
   {
     id: "ev-charging",
     title: "EV Charging Solutions",

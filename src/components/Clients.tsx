@@ -20,6 +20,8 @@ const Client = () => {
     { id: 7, logo: P7, alt: 'Client 7' },
     { id: 8, logo: P8, alt: 'Client 8' },
     { id: 9, logo: P9, alt: 'Client 9' },
+    { id: 10, logo: "https://i.ibb.co/whDqhnwm/Anilneuro.png", alt: 'Client 10' },
+    { id: 11, logo: "https://media.licdn.com/dms/image/v2/C4D0BAQF1nSKFwMTZYg/company-logo_200_200/company-logo_200_200/0/1657087926892/tilaknagarindustries_logo?e=2147483647&v=beta&t=nqrt4YsZ-rhwlg-tymo0LXdl0MFywLH-pYU50BL6Dvs", alt: 'Client 11' },
   ];
 
   // Duplicate the clients array for seamless infinite scroll
